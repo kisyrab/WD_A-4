@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a{text-decoration: none; color: inherit;}
+ul, li{list-style: none;}
+
+body{
+    background-color: #f2f2f2; color: #333;
+    font-family: Arial, "고딕", Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+#wrap{
+    width: 1200px; height: 700px;
+    margin: 0 auto;
+    background-color: #999; 
+    position: relative; /* sub_bg */
+}
+
+/* //////////////////////header///////////////////// */
+#header{
+    width: 100%; height: 100px;
+    background-color: #888;
+}
+
+    .logo{
+        float: left;
+        width: 200px;
+        height: 100px;
+        /* background-color: #555; */
+        padding-top: 30px; /* 전체높이-이미지세로사이즈/2 */
+    }
+    .logo a{}
+    .logo a img{
+        /* 200*40 */
+    }
+
+    .nav{
+        float: right;
+        margin-top: 50px;
+        margin-right: 20px;
+    }
+    
+    .main{
+        
+    }
+    .main>li{
+        float: left;
+        display: inline-block;
+        position: relative;
+    }
+    .main>li>a{
+        display: block;
+        width: 150px; height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #ff5050;
+        font-size: 20px;
+        font-weight: 900;
+        color: #fff;
+        border-radius: 20px 20px 0 0;
+    }
+    .main>li:hover>a{
+        background-color: #ffc000;
+        
+    }
+    
+    .sub{
+        position: absolute;
+        left: 0; top: 50px;
+        width: 100%;
+        z-index: 20;
+        display: none;
+    }
+    .sub li{}
+    .sub li a{
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-weight: 600;
+        background-color: #ffc000;
+        color: #fff;
+    }
+    .sub li a:hover{
+        background-color: #ff5050;
+
+        }
+
+    .sub_bg{
+        width: 1200px;
+        height: 120px;
+        background-color: #ffc000;
+        position: absolute;
+        top: 100px; left: 0;
+        z-index: 10;
+        display: none;
+    }
+
+/* ///////////////////container///////////////////// */
+#container{
+    width: 100%; height: 500px;
+    /* background-color: #777; */
+}
+
+.view{
+    height: 300px;
+}
+
+    .fade{width: 100%; height: 300px; position: relative;}
+    .fade li{width: 100%; height: 300px; position: absolute;}
+    .fade li a{}
+    .fade li a img{}
+
+
+            /* //공지사항// */
+.contents{width: 1200px;}
+.contents>div{
+    width: 400px; height: 200px;
+    float: left;
+    
+}
+.contents h2{
+    width: 100px; height: 35px; line-height: 35px;
+    font-weight: 600; font-size: 15px;
+    text-align: center;
+    background-color: #ff5050;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+.contents ul{
+    width: 100%; height: 165px;
+    background-color: #ff5050;
+    color: #fff;
+    border-radius: 0 10px 10px;
+    padding: 10px;
+}
+
+
+    .noti{}
+    .noti ul{}
+    .noti ul li{height: 36px; line-height: 36px;
+    border-bottom: 1px dotted #fff;}
+    .noti ul li a{
+        float: left; 
+
+        width: 75%; 
+        text-wrap: nowrap; overflow: hidden; text-overflow: ellipsis; 
+        /*  넘치는 글자 ... 으로 축약 시켜주는 삼형제. 단, width가 있어야함. */
+
+
+    }
+    .noti ul li span{float: right;}
+
+    .gal{}
+    .gal ul{text-align: center;}
+    .gal ul li{display: inline-block;}
+    .gal ul li a{}
+    .gal ul li a img{
+        opacity: 0.8;
+        transition: all 0.3s;
+    }
+
+    .gal ul li:hover img{opacity: 1;}
+
+
+    .baro{}
+    .baro p{height: 165px; background-color: #ff5050; padding: 4px 0;}
+    .baro p a{}
+    .baro p a img{}
+
+
+/* //////////////////footer///////////////////////// */
+#footer{
+    width: 100%; height: 100px;
+    background-color: #666;
+}
